@@ -1,0 +1,17 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="buyOrder" version="4">
+  <OBJECT>
+    <ID name="buyOrder" mc="Standard.DataType" uid="2cab8ed1-41c8-4fd5-bca9-17b16c375b98"/>
+    <PID name="AddTransactionMsg" mc="Standard.Class" uid="e6759bef-1271-4820-baac-b0f2a0c60b6b"/>
+    <ATTRIBUTES>
+      <ATT name="IsElementary">false</ATT>
+      <ATT name="IsAbstract">false</ATT>
+      <ATT name="IsLeaf">false</ATT>
+      <ATT name="IsRoot">false</ATT>
+      <ATT name="Visibility">Public</ATT>
+      <ATT name="Name"><![CDATA[buyOrder]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES></DEPENDENCIES>
+  </OBJECT>
+</EXT>

@@ -1,0 +1,23 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="1...n" version="4">
+  <OBJECT>
+    <ID name="1...n" mc="Standard.Package" uid="6c1aee42-5088-4caf-85fd-8b32c34e7f47"/>
+    <PID name="digitalbankge" mc="Standard.Package" uid="9280ae8a-d6ec-470c-a17e-fd9f89ef3b3f"/>
+    <ATTRIBUTES>
+      <ATT name="IsInstantiable">false</ATT>
+      <ATT name="IsAbstract">false</ATT>
+      <ATT name="IsLeaf">false</ATT>
+      <ATT name="IsRoot">false</ATT>
+      <ATT name="Visibility">Public</ATT>
+      <ATT name="Name"><![CDATA[1...n]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="OwnedElement">
+        <COMPID name="Class" mc="Standard.Class" uid="e3fe84d7-5a9c-4c0a-9515-a043e1af9316"/>
+        <COMPID name="Class" mc="Standard.Class" uid="e6c38315-9e34-4364-8258-ef531ae6263c"/>
+        <COMPID name="OrderMatcher" mc="Standard.Class" uid="b4b43ebc-95f5-4add-b6bb-53a218c62faf"/>
+      </COMP>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>

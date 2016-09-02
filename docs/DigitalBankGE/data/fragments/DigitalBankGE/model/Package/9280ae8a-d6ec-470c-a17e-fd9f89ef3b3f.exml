@@ -1,0 +1,264 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="digitalbankge" version="4">
+  <OBJECT>
+    <ID name="digitalbankge" mc="Standard.Package" uid="9280ae8a-d6ec-470c-a17e-fd9f89ef3b3f"/>
+    <PID name="DigitalBankGE" mc="Standard.Project" uid="6b8463df-d5a2-4cdf-89f1-bbf462084e85"/>
+    <ATTRIBUTES>
+      <ATT name="IsInstantiable">false</ATT>
+      <ATT name="IsAbstract">false</ATT>
+      <ATT name="IsLeaf">false</ATT>
+      <ATT name="IsRoot">false</ATT>
+      <ATT name="Visibility">Public</ATT>
+      <ATT name="Name"><![CDATA[digitalbankge]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="OwnedInformationFlow">
+        <OBJECT>
+          <ID name="InformationFlow" mc="Standard.InformationFlow" uid="ff460338-aad0-44a5-bed2-1e38b9429699"/>
+          <ATTRIBUTES>
+            <ATT name="Name"><![CDATA[InformationFlow]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="InformationSource">
+              <ID name="Controller" mc="Standard.Class" uid="058546fb-f256-493b-adbd-069c66cf07ee"/>
+            </LINK>
+            <LINK relation="InformationTarget">
+              <ID name="OrderBooksProcessor" mc="Standard.Class" uid="9a4ae50c-9d07-4f23-98d9-bfb2c0681572"/>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="InformationFlow" mc="Standard.InformationFlow" uid="37c55041-2434-4a67-9a90-efe7554bc5f7"/>
+          <ATTRIBUTES>
+            <ATT name="Name"><![CDATA[InformationFlow]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="InformationSource">
+              <ID name="OrderMatcher" mc="Standard.Class" uid="b4b43ebc-95f5-4add-b6bb-53a218c62faf"/>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="InformationFlow" mc="Standard.InformationFlow" uid="354ca926-a59a-4348-a35c-5d8359a9d759"/>
+          <ATTRIBUTES>
+            <ATT name="Name"><![CDATA[InformationFlow]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="InformationTarget">
+              <ID name="Controller" mc="Standard.Class" uid="058546fb-f256-493b-adbd-069c66cf07ee"/>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="InformationFlow" mc="Standard.InformationFlow" uid="a8a9385d-8c39-4dab-8eae-df82b78deaf8"/>
+          <ATTRIBUTES>
+            <ATT name="Name"><![CDATA[InformationFlow]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="InformationSource">
+              <ID name="OrderBooksProcessor" mc="Standard.Class" uid="9a4ae50c-9d07-4f23-98d9-bfb2c0681572"/>
+            </LINK>
+            <LINK relation="InformationTarget">
+              <ID name="1...n" mc="Standard.Package" uid="11827049-8ccd-4235-a254-a3fa3b1272b2"/>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="InformationFlow" mc="Standard.InformationFlow" uid="b8f18746-c199-4d9f-a082-2f014195a6cd"/>
+          <ATTRIBUTES>
+            <ATT name="Name"><![CDATA[InformationFlow]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="InformationSource">
+              <ID name="Controller" mc="Standard.Class" uid="058546fb-f256-493b-adbd-069c66cf07ee"/>
+            </LINK>
+            <LINK relation="InformationTarget">
+              <ID name="Finisher" mc="Standard.Class" uid="bedce384-677e-4325-80aa-2a2f20f2b816"/>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="InformationFlow" mc="Standard.InformationFlow" uid="d0571892-50fc-41f9-9e1a-a19f37fdc9d1"/>
+          <ATTRIBUTES>
+            <ATT name="Name"><![CDATA[InformationFlow]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="InformationSource">
+              <ID name="1...n" mc="Standard.Package" uid="006dff7d-9881-4e8e-9c90-8c9f2f024c6e"/>
+            </LINK>
+            <LINK relation="InformationTarget">
+              <ID name="OrderBooksProcessor" mc="Standard.Class" uid="9a4ae50c-9d07-4f23-98d9-bfb2c0681572"/>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="InformationFlow" mc="Standard.InformationFlow" uid="e23c4235-f143-40c3-8c31-3298f61bc7de"/>
+          <ATTRIBUTES>
+            <ATT name="Name"><![CDATA[InformationFlow]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="InformationSource">
+              <ID name="OrderBooksProcessor" mc="Standard.Class" uid="9a4ae50c-9d07-4f23-98d9-bfb2c0681572"/>
+            </LINK>
+            <LINK relation="InformationTarget">
+              <ID name="1...n" mc="Standard.Package" uid="6c1aee42-5088-4caf-85fd-8b32c34e7f47"/>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="InformationFlow" mc="Standard.InformationFlow" uid="afe705c7-8f32-4c2c-a4aa-d483e93063fa"/>
+          <ATTRIBUTES>
+            <ATT name="Name"><![CDATA[InformationFlow]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="InformationSource">
+              <ID name="1...n" mc="Standard.Package" uid="6c1aee42-5088-4caf-85fd-8b32c34e7f47"/>
+            </LINK>
+            <LINK relation="InformationTarget">
+              <ID name="1...n" mc="Standard.Package" uid="006dff7d-9881-4e8e-9c90-8c9f2f024c6e"/>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="InformationFlow" mc="Standard.InformationFlow" uid="9358c36c-b618-460b-acde-dbe3612531f6"/>
+          <ATTRIBUTES>
+            <ATT name="Name"><![CDATA[InformationFlow]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="InformationSource">
+              <ID name="1...n" mc="Standard.Package" uid="6c1aee42-5088-4caf-85fd-8b32c34e7f47"/>
+            </LINK>
+            <LINK relation="InformationTarget">
+              <ID name="1...n" mc="Standard.Package" uid="006dff7d-9881-4e8e-9c90-8c9f2f024c6e"/>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="InformationFlow" mc="Standard.InformationFlow" uid="5205d10f-8b87-49fe-957c-1d45c8518a8f"/>
+          <ATTRIBUTES>
+            <ATT name="Name"><![CDATA[InformationFlow]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="InformationSource">
+              <ID name="1...n" mc="Standard.Package" uid="6c1aee42-5088-4caf-85fd-8b32c34e7f47"/>
+            </LINK>
+            <LINK relation="InformationTarget">
+              <ID name="1...n" mc="Standard.Package" uid="006dff7d-9881-4e8e-9c90-8c9f2f024c6e"/>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="InformationFlow" mc="Standard.InformationFlow" uid="81238cde-77c2-4269-b81c-0cff8a72fdc9"/>
+          <ATTRIBUTES>
+            <ATT name="Name"><![CDATA[InformationFlow]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="InformationSource">
+              <ID name="1...n" mc="Standard.Package" uid="6c1aee42-5088-4caf-85fd-8b32c34e7f47"/>
+            </LINK>
+            <LINK relation="InformationTarget">
+              <ID name="OrderBooksProcessor" mc="Standard.Class" uid="9a4ae50c-9d07-4f23-98d9-bfb2c0681572"/>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="InformationFlow" mc="Standard.InformationFlow" uid="6b1d8486-5e36-4772-bf70-59108d261e0e"/>
+          <ATTRIBUTES>
+            <ATT name="Name"><![CDATA[InformationFlow]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="InformationSource">
+              <ID name="OrderBooksProcessor" mc="Standard.Class" uid="9a4ae50c-9d07-4f23-98d9-bfb2c0681572"/>
+            </LINK>
+            <LINK relation="InformationTarget">
+              <ID name="1...n" mc="Standard.Package" uid="11827049-8ccd-4235-a254-a3fa3b1272b2"/>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="InformationFlow" mc="Standard.InformationFlow" uid="6f194868-9864-491e-8425-5bc981d98f63"/>
+          <ATTRIBUTES>
+            <ATT name="Name"><![CDATA[InformationFlow]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="InformationSource">
+              <ID name="1...n" mc="Standard.Package" uid="11827049-8ccd-4235-a254-a3fa3b1272b2"/>
+            </LINK>
+            <LINK relation="InformationTarget">
+              <ID name="OrderBooksProcessor" mc="Standard.Class" uid="9a4ae50c-9d07-4f23-98d9-bfb2c0681572"/>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="InformationFlow" mc="Standard.InformationFlow" uid="7fc1fad9-c587-41bb-a590-5b345bc88121"/>
+          <ATTRIBUTES>
+            <ATT name="Name"><![CDATA[InformationFlow]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="InformationSource">
+              <ID name="1...n" mc="Standard.Package" uid="006dff7d-9881-4e8e-9c90-8c9f2f024c6e"/>
+            </LINK>
+            <LINK relation="InformationTarget">
+              <ID name="OrderBooksProcessor" mc="Standard.Class" uid="9a4ae50c-9d07-4f23-98d9-bfb2c0681572"/>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="InformationFlow" mc="Standard.InformationFlow" uid="2d067c80-c623-4177-bab8-00d3c61e2320"/>
+          <ATTRIBUTES>
+            <ATT name="Name"><![CDATA[InformationFlow]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="InformationSource">
+              <ID name="1...n" mc="Standard.Package" uid="006dff7d-9881-4e8e-9c90-8c9f2f024c6e"/>
+            </LINK>
+            <LINK relation="InformationTarget">
+              <ID name="OrderBooksProcessor" mc="Standard.Class" uid="9a4ae50c-9d07-4f23-98d9-bfb2c0681572"/>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+      </COMP>
+      <COMP relation="OwnedElement">
+        <COMPID name="Controller" mc="Standard.Class" uid="058546fb-f256-493b-adbd-069c66cf07ee"/>
+        <COMPID name="OrderBooksProcessor" mc="Standard.Class" uid="9a4ae50c-9d07-4f23-98d9-bfb2c0681572"/>
+        <COMPID name="Finisher" mc="Standard.Class" uid="bedce384-677e-4325-80aa-2a2f20f2b816"/>
+        <COMPID name="TransactionStorage" mc="Standard.Class" uid="ad915090-e711-4c04-bc50-55ea0547acdb"/>
+        <COMPID name="1...n" mc="Standard.Package" uid="6c1aee42-5088-4caf-85fd-8b32c34e7f47"/>
+        <COMPID name="MatcherDoneMsg" mc="Standard.Class" uid="e3b2d845-9acb-4535-aa19-c68c5ea848bc"/>
+        <COMPID name="1...n" mc="Standard.Package" uid="006dff7d-9881-4e8e-9c90-8c9f2f024c6e"/>
+        <COMPID name="1...n" mc="Standard.Package" uid="11827049-8ccd-4235-a254-a3fa3b1272b2"/>
+        <COMPID name="1...4" mc="Standard.Package" uid="ea3ab108-82d0-409a-af00-6d34f6dbfd6a"/>
+        <COMPID name="ProcessMsg" mc="Standard.Class" uid="5b700ea3-0c82-4f1c-9ac6-adf08be803f6"/>
+        <COMPID name="AddTransactionMsg" mc="Standard.Class" uid="e6759bef-1271-4820-baac-b0f2a0c60b6b"/>
+        <COMPID name="TransactionServiceDoneMsg" mc="Standard.Class" uid="b3062668-de10-4260-9698-19e9f444a4b8"/>
+        <COMPID name="ParsedMessage" mc="Standard.Class" uid="485a2178-2e84-4988-a2ea-6a22b1d6a285"/>
+        <COMPID name="OrderMsg" mc="Standard.Class" uid="99a71ab2-bae4-482d-ac72-b8d234dfd6d2"/>
+        <COMPID name="ShutDownMsg" mc="Standard.Class" uid="65008551-fb2a-4cd8-961e-4a109b9c13e6"/>
+        <COMPID name="IterationProductsMap" mc="Standard.Class" uid="b6635479-1109-459f-adad-95beaa433926"/>
+        <COMPID name="NewOrderMsg" mc="Standard.Class" uid="0a7285b9-a748-44a2-826b-9b97bdc81ecf"/>
+        <COMPID name="UpdateBookMsg" mc="Standard.Class" uid="815ce619-593b-404e-9018-62036b990138"/>
+        <COMPID name="UpdateBookMsg" mc="Standard.Class" uid="4a558328-0a88-4aa7-bb13-6de35e4d37c0"/>
+        <COMPID name="BrokerMessageStorage" mc="Standard.Class" uid="a5648000-5e61-4ba4-8fb9-c18892c4a5ea"/>
+      </COMP>
+      <COMP relation="Product">
+        <COMPID name="overview diagram" mc="Standard.ClassDiagram" uid="4f43ed8f-8417-4ca9-9387-6a88e986c466"/>
+      </COMP>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>

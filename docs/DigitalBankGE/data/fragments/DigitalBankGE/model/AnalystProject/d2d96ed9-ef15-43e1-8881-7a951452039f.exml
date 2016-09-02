@@ -1,0 +1,15 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="DigitalBankGE" version="4">
+  <OBJECT>
+    <ID name="DigitalBankGE" mc="Standard.AnalystProject" uid="d2d96ed9-ef15-43e1-8881-7a951452039f"/>
+    <ATTRIBUTES>
+      <ATT name="Name"><![CDATA[DigitalBankGE]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="PropertyRoot">
+        <COMPID name="DigitalBankGE" mc="Standard.PropertyContainer" uid="1cf2dd9d-b968-44cb-b577-40857f6fd564"/>
+      </COMP>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>

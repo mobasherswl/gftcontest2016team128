@@ -1,0 +1,39 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="1...4" version="4">
+  <OBJECT>
+    <ID name="1...4" mc="Standard.Package" uid="ea3ab108-82d0-409a-af00-6d34f6dbfd6a"/>
+    <PID name="digitalbankge" mc="Standard.Package" uid="9280ae8a-d6ec-470c-a17e-fd9f89ef3b3f"/>
+    <ATTRIBUTES>
+      <ATT name="IsInstantiable">false</ATT>
+      <ATT name="IsAbstract">false</ATT>
+      <ATT name="IsLeaf">false</ATT>
+      <ATT name="IsRoot">false</ATT>
+      <ATT name="Visibility">Public</ATT>
+      <ATT name="Name"><![CDATA[1...4]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="OwnedElement">
+        <COMPID name="Class" mc="Standard.Class" uid="16ff4c8f-84d4-4f1c-8ff7-dd6689454e13"/>
+        <COMPID name="Class1" mc="Standard.Class" uid="ca527041-c3c3-464d-987b-cd675a8097d5"/>
+        <COMPID name="Consumer" mc="Standard.Class" uid="6c1a9b18-0a36-4fa9-bbd2-904caacb0583"/>
+      </COMP>
+      <COMP relation="DependsOnDependency">
+        <OBJECT>
+          <ID name="" mc="Standard.Dependency" uid="a34d629a-5d48-4a5a-845c-96d7343baae2"/>
+          <ATTRIBUTES>
+            <ATT name="DependsOnId"></ATT>
+            <ATT name="DependsOnName"></ATT>
+            <ATT name="Name"></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="DependsOn">
+              <ID name="BrokerMessageStorage" mc="Standard.Class" uid="a5648000-5e61-4ba4-8fb9-c18892c4a5ea"/>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+      </COMP>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>

@@ -1,0 +1,12 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="DigitalBankGE" version="4">
+  <OBJECT>
+    <ID name="DigitalBankGE" mc="Standard.DiagramSet" uid="f001792c-81fb-477b-85d1-5cd31070d422"/>
+    <PID name="DigitalBankGE" mc="Standard.Project" uid="6b8463df-d5a2-4cdf-89f1-bbf462084e85"/>
+    <ATTRIBUTES>
+      <ATT name="Name"><![CDATA[DigitalBankGE]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES></DEPENDENCIES>
+  </OBJECT>
+</EXT>

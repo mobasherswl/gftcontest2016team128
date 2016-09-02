@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <appender name="STD_OUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{5} - %msg%n</pattern>
+        </encoder>
+    </appender>
+    <appender name="FILE_OUT" class="ch.qos.logback.core.FileAppender">
+        <file>./log/exchange.core.log</file>
+        <append>false</append>
+        <encoder>
+            <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{5} - %msg%n</pattern>
+        </encoder>
+    </appender>
+    <appender name="GFT_OUT" class="ch.qos.logback.core.FileAppender">
+        <file>./build/test-results/verification-logs.log</file>
+        <encoder>
+            <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{5} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <logger name="com.gft.digitalbank.exchange.verification" level="ERROR" additivity="false">
+        <appender-ref ref="GFT_OUT"/>
+    </logger>
+
+    <logger name="org.apache.activemq" level="ERROR" additivity="false">
+        <appender-ref ref="GFT_OUT"/>
+    </logger>
+
+    <root level="ERROR">
+        <appender-ref ref="STD_OUT"/>
+        <appender-ref ref="FILE_OUT"/>
+    </root>
+
+</configuration>

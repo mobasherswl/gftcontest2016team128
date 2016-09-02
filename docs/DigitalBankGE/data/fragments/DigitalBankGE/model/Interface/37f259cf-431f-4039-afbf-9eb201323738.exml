@@ -1,0 +1,17 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="brokerShutDownIds" version="4">
+  <OBJECT>
+    <ID name="brokerShutDownIds" mc="Standard.Interface" uid="37f259cf-431f-4039-afbf-9eb201323738"/>
+    <PID name="Controller" mc="Standard.Class" uid="058546fb-f256-493b-adbd-069c66cf07ee"/>
+    <ATTRIBUTES>
+      <ATT name="IsElementary">false</ATT>
+      <ATT name="IsAbstract">true</ATT>
+      <ATT name="IsLeaf">false</ATT>
+      <ATT name="IsRoot">false</ATT>
+      <ATT name="Visibility">Private</ATT>
+      <ATT name="Name"><![CDATA[brokerShutDownIds]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES></DEPENDENCIES>
+  </OBJECT>
+</EXT>
