@@ -7,19 +7,16 @@ import com.gft.digitalbank.exchange.model.orders.Side;
 import com.gft.digitalbank.exchange.solution.orderbooks.cache.OrderCache;
 import org.apache.commons.lang3.StringUtils;
 
-import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.List;
-import java.util.Queue;
-import java.util.concurrent.PriorityBlockingQueue;
+import java.util.*;
+import java.util.function.BiFunction;
 
 import static com.gft.digitalbank.exchange.model.orders.Side.BUY;
 import static com.google.common.base.Preconditions.checkArgument;
 
 public class BuySellOrderQueueImpl implements BuySellOrderQueue {
     private static final int SIZE = 16;
-    private final PriorityBlockingQueue<PositionOrder> buyOrderPriorityBlockingQueue;
-    private final PriorityBlockingQueue<PositionOrder> sellOrderPriorityBlockingQueue;
+    private final PriorityQueue<PositionOrder> buyOrderPriorityQueue;
+    private final PriorityQueue<PositionOrder> sellOrderPriorityQueue;
     private final OrderCache orderCache;
     private final String product;
 
@@ -29,32 +26,32 @@ public class BuySellOrderQueueImpl implements BuySellOrderQueue {
 
         this.orderCache = orderCache;
         this.product = product;
-        buyOrderPriorityBlockingQueue = new PriorityBlockingQueue<>(SIZE, getBuyPositionOrderComparator());
-        sellOrderPriorityBlockingQueue = new PriorityBlockingQueue<>(SIZE, getSellPositionOrderComparator());
+        buyOrderPriorityQueue = new PriorityQueue<>(SIZE, getPositionOrderComparator((o1, o2) -> Integer.compare(o2.getDetails().getPrice(), o1.getDetails().getPrice())));
+        sellOrderPriorityQueue = new PriorityQueue<>(SIZE, getPositionOrderComparator((o1, o2) -> Integer.compare(o1.getDetails().getPrice(), o2.getDetails().getPrice())));
     }
 
     @Override
     public void put(PositionOrder positionOrder) {
         orderCache.put(positionOrder);
         if (BUY == positionOrder.getSide()) {
-            buyOrderPriorityBlockingQueue.put(positionOrder);
+            buyOrderPriorityQueue.add(positionOrder);
         } else {
-            sellOrderPriorityBlockingQueue.put(positionOrder);
+            sellOrderPriorityQueue.add(positionOrder);
         }
     }
 
     @Override
     public boolean remove(PositionOrder positionOrder) {
         if (BUY == positionOrder.getSide()) {
-            return buyOrderPriorityBlockingQueue.remove(positionOrder);
+            return buyOrderPriorityQueue.remove(positionOrder);
         } else {
-            return sellOrderPriorityBlockingQueue.remove(positionOrder);
+            return sellOrderPriorityQueue.remove(positionOrder);
         }
     }
 
     @Override
     public boolean areBuySellOrdersAvailable() {
-        return !(buyOrderPriorityBlockingQueue.isEmpty() || sellOrderPriorityBlockingQueue.isEmpty());
+        return !(buyOrderPriorityQueue.isEmpty() || sellOrderPriorityQueue.isEmpty());
     }
 
     @Override
@@ -65,9 +62,9 @@ public class BuySellOrderQueueImpl implements BuySellOrderQueue {
     @Override
     public Queue<PositionOrder> get(Side side) {
         if (BUY == side) {
-            return buyOrderPriorityBlockingQueue;
+            return buyOrderPriorityQueue;
         } else {
-            return sellOrderPriorityBlockingQueue;
+            return sellOrderPriorityQueue;
         }
     }
 
@@ -78,25 +75,25 @@ public class BuySellOrderQueueImpl implements BuySellOrderQueue {
     }
 
     private List<OrderEntry> getBuyOrderEntries() {
-        return toOrderEntries(buyOrderPriorityBlockingQueue);
+        return toOrderEntries(buyOrderPriorityQueue);
     }
 
     private List<OrderEntry> getSellOrderEntries() {
-        return toOrderEntries(sellOrderPriorityBlockingQueue);
+        return toOrderEntries(sellOrderPriorityQueue);
     }
 
-    private List<OrderEntry> toOrderEntries(PriorityBlockingQueue<PositionOrder> queue) {
+    private List<OrderEntry> toOrderEntries(PriorityQueue<PositionOrder> queue) {
         final List<OrderEntry> orderEntries = new ArrayList<>();
-        Integer entryOrderIdGenerator = 1;
+        int entryOrderIdGenerator = 1;
         for (PositionOrder order = queue.poll(); order != null; order = queue.poll()) {
             orderEntries.add(of(entryOrderIdGenerator++, order));
         }
         return orderEntries;
     }
 
-    private Comparator<PositionOrder> getBuyPositionOrderComparator() {
+    private Comparator<PositionOrder> getPositionOrderComparator(BiFunction<PositionOrder, PositionOrder, Integer> compareBiFunction) {
         return (o1, o2) -> {
-            int comparison = Integer.compare(o2.getDetails().getPrice(), o1.getDetails().getPrice());
+            int comparison = compareBiFunction.apply(o1, o2);
             if (comparison == 0) {
                 comparison = Long.compare(o1.getTimestamp(), o2.getTimestamp());
             }
@@ -104,13 +101,4 @@ public class BuySellOrderQueueImpl implements BuySellOrderQueue {
         };
     }
 
-    private Comparator<PositionOrder> getSellPositionOrderComparator() {
-        return (o1, o2) -> {
-            int comparison = Integer.compare(o1.getDetails().getPrice(), o2.getDetails().getPrice());
-            if (comparison == 0) {
-                comparison = Long.compare(o1.getTimestamp(), o2.getTimestamp());
-            }
-            return comparison;
-        };
-    }
 }

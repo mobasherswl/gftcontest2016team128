@@ -4,6 +4,7 @@ import com.gft.digitalbank.exchange.Exchange;
 import com.gft.digitalbank.exchange.listener.ProcessingListener;
 import com.gft.digitalbank.exchange.solution.config.ExchangeCoreModule;
 import com.gft.digitalbank.exchange.solution.controller.StockController;
+import com.google.inject.Inject;
 import com.google.inject.Injector;
 
 import java.util.List;
